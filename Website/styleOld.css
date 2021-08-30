@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0rem;
+    box-sizing: border-box;
+}
+/* The background colour and animation */
+header{
+    text-align:center;
+    padding: 5rem;
+    color: #fff;
+    background: linear-gradient(-45deg, #63c5c9 15%,#637bc9 35%, #a963c9 65%,#f076d5 85%);
+    background-size: 400% 400%;
+    animation: change 10s ease-in-out infinite;
+    border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+@keyframes change{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+#buttons{
+    display:flex;
+}
+button{
+    font-size: 24px;
+    font-family: Copperplate, Papyrus, fantasy;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    border: 1px solid aliceblue;
+    border-radius: 10px;
+    margin-inline: 7%;
+    margin-top:4rem;
+    flex:1;
+    align-items: center;
+}
+button:hover{
+    opacity: 50%;
+    color:rgb(44, 12, 32);
+    border: 1px solid rgb(44, 12, 32);  
+}
+button:active {
+    transform: translateY(4px);
+}
+footer{
+    color: white;
+    background-color:rgb(46, 42, 46);
+    text-align:center;
+    font-family: Copperplate, Papyrus, fantasy;
+    letter-spacing: 2px;
+    padding: 1rem 5rem;
+}
+#hline{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top:5.5rem;
+}
+#content{
+    color:white;
+    background-color:rgb(27, 26, 26);
+    padding: 3rem;
+}
+img{
+    border: 10px solid rgb(46, 41, 41);
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+}
+section{
+    margin: 5rem 10em;
+}
+
+h1{
+    font-size: 60px;
+    font-family: Copperplate, Papyrus, fantasy;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 5rem;
+}
+h3{
+    padding-top:7rem;
+    padding-inline:5rem;
+    font-size:25px;
+    text-align:center;
+    position:center;
+    font-family: 'papyrus';
+    color:rgb(221, 213, 213);
+}
+h4{
+    text-align:center;
+    font-size: 50px;
+    text-decoration: 2px underline overline;
+    font-family:'papyrus';
+}
+h5{
+    text-align:center;
+    font-size: 50px;
+    text-decoration: 2px underline overline;
+    font-family:Blippo, fantasy;
+}
+#projectText{
+    text-align:center;
+    font-size: 50px;
+    text-decoration: 2px underline overline;
+    font-family:Blippo, fantasy;
+}
