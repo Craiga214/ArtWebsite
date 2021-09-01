@@ -70,6 +70,11 @@ section
     height: 100vh;
     padding: 100px;
 }
+#sec
+{
+    z-index: 1000;
+    background-color: rgb(0, 255, 255);
+}
 section::before
 {
     left: 0;
@@ -91,7 +96,12 @@ section img
     height: 100%;
     object-fit: cover;
 }
-section img #moon
+#sun
 {
     mix-blend-mode: screen;
+    z-index: -1;
+}
+#stars
+{
+    z-index: -1;
 }

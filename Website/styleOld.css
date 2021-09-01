@@ -80,6 +80,9 @@ img{
 section{
     margin: 5rem 10em;
 }
+section .sec{
+    z-index: 10000;
+}
 
 h1{
     font-size: 60px;

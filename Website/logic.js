@@ -5,9 +5,9 @@ function parallax(){
     let nav = document.getElementById('nav');
     window.addEventListener('scroll', function(){
         let value = window.scrollY;
-        nav.style.top = value + 'px'
-        stars.style.left = value + 'px';
-        sun.style.top = value * 0.5 + 'px';
+        nav.style.top = value + 'px';
+        stars.style.transform = 'rotate(' + 0.25*value + 'deg)';
+        sun.style.top = value + 'px';
     })
 }
 function toHome(){
