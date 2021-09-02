@@ -1,4 +1,5 @@
-
+//Changes the colour of the buttons depending on where you are. 
+//Need this because you can't see black on black
 $(window).scroll(function() {
     let buttons = document.getElementsByClassName('buttons');
     if ($(this).scrollTop() >= screen.height*0.75) {
@@ -14,9 +15,8 @@ $(window).scroll(function() {
     }
 });
 
-
+//Parallax function. This handles all of them
 function parallax(){
-    console.log("Hello");
     let stars = document.getElementById('stars');
     let sun = document.getElementById('sun');
     let nav = document.getElementById('nav');
@@ -28,12 +28,51 @@ function parallax(){
     })
 }
 
+//On startup, disable scrolling
+function startUp(){
+    $('body').css({'overflow':'hidden'});
+    $(document).bind('scroll',function () { 
+         window.scrollTo(0,0); 
+    });
+    let invis = document.getElementsByClassName('invisible');
+    for (let i = 0; i < invis.length; i++){
+        invis[i].style.opacity = "0";
+    }
+}
+
+//Enable scrolling and animate to home screen
+function welcome(){
+    let stuff = document.getElementsByClassName('invisible');
+    
+    //Fade in and other animations
+    for (let i = 0; i < stuff.length; i++){
+        stuff[i].style.visibility = "visible";
+        opacity = 0;
+        intervalID = setInterval(function() {
+            if (opacity < 1) {
+                opacity = opacity + 0.001
+                stuff[i].style.opacity = opacity;
+            } else {
+                clearInterval(intervalID);
+            }
+        }, 10);
+    }
+    //Hide the original button
+    let stuff2 = document.getElementById('start');
+    stuff2.style.visibility = "hidden";
+    stuff2.style.opacity = '0';
+
+    $(document).unbind('scroll'); 
+    $('body').css({'overflow-y':'visible'});
+}
+
+//Multiple scrolling functions
 function toHome(){
     window.scrollTo(0,0);
 };
 
 function toAbout(){
-    window.scrollTo(0,2500);
+    window.scrollTo(0,screen.height);
 };
 
 function toProjects(){

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppings:300,400,500,600,700,800,900&display=swap');
+/* General Applications*/
 *
 {
     margin: 0;
@@ -7,12 +7,42 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior:smooth;
 }
+.invisible
+{
+    visibility: hidden;
+}
+#start
+{
+    position: absolute;
+    object-fit: cover;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+
+    font-family: Copperplate, Papyrus, fantasy;
+    font-size: 50px;
+    font-weight: 700;
+
+    cursor: pointer;
+    color: #343038;
+    background-color: transparent;
+    border: 2px solid #343038;
+    border-radius: 20px; 
+}
+#start:hover
+{
+    opacity: 50%;
+    color:rgb(44, 12, 32);
+    border: 1px solid rgb(44, 12, 32);  
+    color: #343038 !important; 
+}
 body
 {
     min-height: 100vh;
     background: linear-gradient(#2b1055, #7597de);
     overflow-x: hidden;
 }
+/*Everything for the animated section, including buttons*/
 header
 {
     position:absolute;
@@ -33,6 +63,7 @@ header .logo
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+/*Creating the buttons section for navigation*/
 header #nav{
     display:flex;
     justify-content: center;
@@ -59,39 +90,21 @@ header #nav li .buttons
     border-color:transparent;
     border-radius: 10px; 
 }
-header #nav li button:hover , 
-header #nav li button.active
+header #nav li .buttons:hover , 
+header #nav li .buttons.active
 {
     background: #fff;
     color: #343038 !important; 
 }
-section
+/*Editting Images*/
+#pics
 {
     position: relative;
     width: 100%;
     height: 100vh;
     padding: 100px;
 }
-#sec
-{
-    z-index: 1000;
-    background-color: #1c0522;
-    color: rgb(255,255,255);
-    padding:100px; 
-}
-section::before
-{
-    left: 0;
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, #1c0522, transparent);
-    z-index: 999;
-    
-}
-section img
+#pics img
 {
     position: absolute;
     top: 0;
@@ -105,7 +118,7 @@ section img
     left: 25%;
     width: 50%;
     height: 50%;
-    mix-blend-mode: screen;
+    /*mix-blend-mode: screen;*/
     z-index: -1;
 }
 #stars
@@ -114,6 +127,35 @@ section img
 }
 #bGround
 {
-    z-index: -3;
-    filter:brightness(75%);
+    z-index: -10;
+    filter:brightness(70%);
+}
+
+/*Text block, split into three for side borders*/
+#mainRow {
+    background-color: #1d151f;
+    display: table;
+    width: 100%; /*Optional*/
+
+}
+.Column {
+    display: table-cell;
+}
+#sec
+{
+    display: table-cell;
+    z-index: 1000;
+    color: rgb(255,255,255);
+    padding:100px; 
+}
+#pics::before
+{
+    left: 0;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to top, #1d151f, transparent);
+    z-index: 999;
 }
