@@ -11,11 +11,11 @@ function parallax(){
     })
 }
 function toHome(){
-    window.location.href = "index.html";
+    window.scrollTo(0,0);
 };
 
-function toAboutMe(){
-    window.location.href = "about_me.html";
+function toAbout(){
+    window.scrollTo(0,2500);
 };
 
 function toProjects(){
@@ -23,7 +23,7 @@ function toProjects(){
 };
 
 function toContact(){
-    window.location.href = "contact.html";
+    window.scrollTo(0,document.body.scrollHeight);
 };
 
 function notDone(){
