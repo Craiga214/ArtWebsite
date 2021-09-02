@@ -1,3 +1,20 @@
+
+$(window).scroll(function() {
+    let buttons = document.getElementsByClassName('buttons');
+    if ($(this).scrollTop() >= screen.height*0.75) {
+        for (let i = 0; i < buttons.length; i++){
+            buttons[i].style.color = 'rgb(255,255,255)';
+            buttons[i].style.color = 'rgb(255,255,255)';
+        }
+    }
+    else {
+        for (let i = 0; i < buttons.length; i++){
+            buttons[i].style.color = '#343038';
+        }
+    }
+});
+
+
 function parallax(){
     console.log("Hello");
     let stars = document.getElementById('stars');
@@ -10,6 +27,7 @@ function parallax(){
         sun.style.top = value + 'px';
     })
 }
+
 function toHome(){
     window.scrollTo(0,0);
 };

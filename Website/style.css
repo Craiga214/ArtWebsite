@@ -43,7 +43,7 @@ header #nav li{
     list-style: none;
     margin-left: 30px;
 }
-header #nav li button
+header #nav li .buttons
 {
     font-family: Copperplate, Papyrus, fantasy;
     text-decoration: none;
@@ -63,7 +63,7 @@ header #nav li button:hover ,
 header #nav li button.active
 {
     background: #fff;
-    color: #343038;
+    color: #343038 !important; 
 }
 section
 {
